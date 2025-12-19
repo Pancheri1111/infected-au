@@ -2,23 +2,41 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>THE BROKEN HIVE - Terminal</title>
+    <title>TERMINAL JCJENSON - BOOT</title>
     <style>
-        body { background: #050505; color: #ff3333; font-family: 'Courier New', monospace; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; margin: 0; }
-        .hub-box { border: 1px solid #333; padding: 40px; text-align: center; background: #0a0a0a; box-shadow: 0 0 30px rgba(255, 0, 0, 0.2); max-width: 600px; }
-        .logo-main { width: 300px; height: auto; margin-bottom: 20px; filter: drop-shadow(0 0 15px #ff0000); }
-        .blink { animation: blink 1s infinite; }
-        @keyframes blink { 50% { opacity: 0; } }
-        a { color: #ff3333; text-decoration: none; border: 1px solid #ff3333; padding: 15px 30px; margin-top: 30px; display: inline-block; transition: 0.3s; font-weight: bold; }
-        a:hover { background: #ff3333; color: black; box-shadow: 0 0 20px #ff3333; }
+        body { background: #1a1a1a; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; font-family: 'Courier New', monospace; }
+        
+        .monitor {
+            width: 85vw; height: 80vh; background: #050505; border: 15px solid #333; border-radius: 25px;
+            position: relative; box-shadow: inset 0 0 80px rgba(0,0,0,0.9), 0 0 40px rgba(0,0,0,0.5);
+            display: flex; flex-direction: column; align-items: center; justify-content: center; overflow: hidden;
+        }
+
+        .monitor::before {
+            content: " "; position: absolute; top: 0; left: 0; bottom: 0; right: 0;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.03));
+            background-size: 100% 3px, 2px 100%; pointer-events: none; z-index: 10;
+        }
+
+        .logo-main { width: 250px; filter: drop-shadow(0 0 15px #ff0000); margin-bottom: 20px; z-index: 5; }
+        
+        h1 { color: #ff3333; font-size: 1.5em; text-align: center; z-index: 5; letter-spacing: 3px; }
+        
+        .loading-text { color: #555; font-size: 0.9em; margin-top: 10px; z-index: 5; }
+
+        a { 
+            color: #ff3333; text-decoration: none; border: 1px solid #ff3333; padding: 12px 25px; 
+            margin-top: 30px; z-index: 5; transition: 0.3s; font-weight: bold;
+        }
+        a:hover { background: #ff3333; color: black; box-shadow: 0 0 15px #ff3333; }
     </style>
 </head>
 <body>
-    <div class="hub-box">
-        <img src="logo%20(2).png" alt="Logo" class="logo-main">
-        <h1>SISTEMA CENTRAL JCJENSON</h1>
-        <p class="blink">AGUARDANDO AUTENTICAÇÃO...</p>
-        <a href="logs.html">ACESSAR BANCO DE DADOS (INFECTED_AU)</a>
+    <div class="monitor">
+        <img src="logo%20(2).png" class="logo-main">
+        <h1>SISTEMA DE RECUPERAÇÃO JCJENSON</h1>
+        <p class="loading-text">UNIDADE: SERIAL_DESIGNATION_N</p>
+        <a href="logs.html">INICIAR SESSÃO</a>
     </div>
 </body>
 </html>
