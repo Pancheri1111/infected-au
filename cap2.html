@@ -2,14 +2,116 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>LOG_N_CAP2</title>
-    <style>body { background: #0a0a0a; color: #d4d4d4; font-family: 'Courier New', monospace; padding: 30px; line-height: 1.6; } .header { color: #ff3333; } a { color: #ff3333; text-decoration: none; }</style>
+    <title>THE BROKEN HIVE - CAP 2</title>
+    <style>
+        body { 
+            background: #0a0a0a; 
+            color: #d4d4d4; 
+            font-family: 'Courier New', monospace; 
+            padding: 60px; 
+            line-height: 1.8; 
+            text-align: justify;
+        }
+        .corner-logo { position: fixed; top: 15px; left: 15px; width: 60px; opacity: 0.8; filter: drop-shadow(0 0 5px #ff0000); }
+        .date { color: #ff3333; font-weight: bold; text-align: center; font-size: 1.5em; margin: 30px 0; }
+        .highlight { color: #fff; text-shadow: 0 0 5px #ff3333; font-weight: bold; }
+        .title { color: #ff3333; text-align: center; font-size: 2.5em; letter-spacing: 5px; margin-bottom: 20px; }
+        #typewriter { white-space: pre-wrap; font-size: 1.1em; }
+        .cursor { display: inline-block; width: 10px; height: 1.2em; background: #ff3333; animation: blink 0.7s infinite; vertical-align: middle; }
+        @keyframes blink { 50% { opacity: 0; } }
+        a { color: #666; text-decoration: none; margin-top: 50px; display: none; text-align: center; border: 1px solid #222; padding: 10px; transition: 0.3s; }
+        a:hover { color: #ff3333; border-color: #ff3333; }
+    </style>
 </head>
 <body>
-    <div class="header">CAPÍTULO 2: O BUNKER</div>
-    <p>Conseguimos entrar no Posto Avançado 3 usando uma gravação do criador original. Lá encontramos espécimes capturados: O-1 (Doll) e O-2 (Ted).</p>
-    <p>Ted foi infectado e tentaram parar a infecção arrancando seus braços; ele gritou por desespero, não por dor. Descobrimos que o bunker de titânio e chumbo atua como barreira física contra o chamado da colmeia.</p>
-    <p>Conheci Uzi. Personalidade inquisitiva e obcecada pelo exterior.</p>
-    <a href="logs.html">< VOLTAR AOS ARQUIVOS</a>
+    <img src="logo%20(2).png" class="corner-logo">
+    <div class="title">The Broken Hive</div>
+    
+    <div class="date">DIA 1</div>
+
+    <div id="typewriter"></div><span id="cursor" class="cursor"></span>
+
+    <a href="logs.html" id="btn-back">< VOLTAR AOS ARQUIVOS</a>
+
+    <script>
+        const text = `Dia 3 — Após inúmeras tentativas, conseguimos estabelecer comunicação com o Posto Avançado 3. A recepção foi... hostil. Os operários recusaram nossa entrada, afirmando que não havia forma confiável de garantir que não estávamos infectados. Descobrimos que certos infectados avançados adquiriram a capacidade de simular vozes — inclusive imitar seus antigos hospedeiros com precisão desconcertante. Isso torna o conceito de identidade... frágil.
+
+
+
+Mesmo com nossas designações claras, fomos negados. Fomos forçados a recorrer a um dos poucos recursos humanos restantes: uma gravação de voz do criador original dos operários. A resposta foi imediata. A obediência ao comando foi automática.
+
+
+
+
+
+J comentou: "Eles têm medo de nós."
+
+Eu respondi: "Eles têm medo do que representamos."
+
+"É a mesma coisa, N," ela finalizou.
+
+
+
+No interior do posto, encontramos dois espécimes capturados. O primeiro apresentava sinais de infecção parcial, mas havia desenvolvido um bloqueio interno — um software improvisado, fraco, porém eficaz até o momento. Chamava-se "Doll". O segundo, "Ted", fora recentemente infectado. Tentaram interromper a disseminação arrancando seus dois braços. As marcas eram cruas — peças metálicas retorcidas, fios expostos e óleo misturado com matéria orgânica queimando lentamente. Ted gritou durante o procedimento. Não por dor — por desespero.
+
+
+
+Por protocolo, rebatizamos os dois como O-1 (Doll) e O-2 (Ted). A criação de laços afetivos com unidades operárias é contraproducente.
+
+
+
+O posto abriga cerca de 2.000 unidades. Algumas simulam comportamentos juvenis; outras, adultos. Reproduziram elementos da sociedade humana — trabalho, rotina, até estruturas inúteis como escolas e salas de descanso. Corrigimos isso. Ordenamos o desmonte de tudo que não tivesse função direta de sobrevivência. Mantivemos apenas as três primeiras portas reforçadas — o resto era vulnerável e comprometia a segurança.
+
+
+
+Entre os operários, um nome se destacou: UZI. Personalidade inquisitiva. Obcecada por explorar o exterior e enfrentar os infectados. Estranhamente... motivada. Possui ligação direta com o projetista das portas reforçadas — seu "genitor", ao que tudo indica.
+
+
+
+Dia 7 — O-2 sucumbiu. Tornou-se um Solver. Fizemos testes imediatamente. Esperávamos uma reação em massa da mente-colmeia, mas não houve. Isso revelou algo crítico: a rede da colmeia não é global. Fragmenta-se em nós locais com alcance limitado — entre 1 a 3 km por núcleo.
+
+
+
+O bunker, composto por uma liga de titânio e chumbo, atua como barreira física. Nenhum infectado respondeu ao chamado de O-2 dentro da instalação. A unidade J observou em silêncio. Análise: essa descoberta redefine estratégias de contenção.
+
+
+
+Testes com O-1 revelaram falhas permanentes de hardware. Irrecuperável. Ainda assim, útil para estudo. Tentamos criar uma ponte neural entre O-1 e O-2. Fracassamos.
+
+O-2 foi encerrado. Restava pouco dele, de qualquer forma.
+
+
+
+Dia 14 — Unidade V foi atacada por um infectado que tudo indica ser um estágio 3. Perdeu o braço esquerdo. J sugeriu transplantar meu membro. Procedimento executado com sucesso. Posteriormente, desenvolvemos uma unidade de replicação de componentes com capacidade de autoaperfeiçoamento. Limitada. Mas funcional.
+
+perguntei para V oque achou do meu braço V respondeu "nossos modelos de braço são iguais N porque pergunta uma coisa tão obvia?"
+
+
+
+Dia 15 — Realmente é horrível ficar sem braço finalmente estou totalmente funcional agora.
+
+
+
+Dia 17 — Capturamos dois novos infectados. Um em estágio 2. Outro em estágio 3.
+
+
+
+O estágio 3... respira. Não por necessidade, mas para tentar imitar os humanos.
+`;
+
+        let i = 0;
+        function typeWriter() {
+            if (i < text.length) {
+                document.getElementById("typewriter").innerHTML += text.charAt(i);
+                i++;
+                // Velocidade alterada para 5ms (muito mais rápido)
+                setTimeout(typeWriter, 5); 
+            } else {
+                document.getElementById("btn-back").style.display = "block";
+                document.getElementById("cursor").style.display = "none";
+            }
+        }
+        window.onload = typeWriter;
+    </script>
 </body>
 </html>
