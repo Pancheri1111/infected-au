@@ -2,30 +2,50 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Logs de Recuperação</title>
+    <title>JCJENSON - ARQUIVOS</title>
     <style>
-        body { background: #050505; color: #d4d4d4; font-family: 'Courier New', monospace; padding: 40px; }
-        .corner-logo { position: fixed; top: 15px; left: 15px; width: 60px; opacity: 0.7; filter: drop-shadow(0 0 5px #ff0000); }
-        h2 { color: #ff3333; border-bottom: 2px solid #333; padding-bottom: 10px; }
+        body { background: #1a1a1a; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; font-family: 'Courier New', monospace; }
+        
+        .monitor {
+            width: 85vw; height: 80vh; background: #050505; border: 15px solid #333; border-radius: 25px;
+            position: relative; box-shadow: inset 0 0 80px rgba(0,0,0,0.9);
+            padding: 40px; box-sizing: border-box; overflow: hidden;
+        }
+
+        .monitor::before {
+            content: " "; position: absolute; top: 0; left: 0; bottom: 0; right: 0;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.02), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.02));
+            background-size: 100% 3px, 2px 100%; pointer-events: none; z-index: 10;
+        }
+
+        .content { color: #00ff00; z-index: 5; position: relative; }
+        
+        h2 { border-bottom: 1px solid #00ff00; padding-bottom: 10px; color: #fff; font-size: 1.2em; }
+        
         ul { list-style: none; padding: 0; }
-        li { margin: 15px 0; border-left: 2px solid #222; padding-left: 10px; }
-        a { color: #ff3333; text-decoration: none; font-weight: bold; }
-        a:hover { color: #fff; text-shadow: 0 0 5px #ff3333; }
-        .locked { color: #333; font-style: italic; }
-        .back { margin-top: 40px; display: block; color: #666; text-decoration: none; }
+        li { margin: 15px 0; padding-left: 10px; border-left: 2px solid #004400; }
+        
+        a { color: #00ff00; text-decoration: none; font-weight: bold; }
+        a:hover { background: #00ff00; color: #000; }
+
+        .system-logo { position: absolute; bottom: 20px; right: 20px; width: 70px; opacity: 0.4; filter: drop-shadow(0 0 5px #ff0000); }
+        .locked { color: #004400; font-style: italic; }
     </style>
 </head>
 <body>
-    <img src="logo%20(2).png" class="corner-logo">
-    <h2>DIRETÓRIO: /SISTEMA/MEMORIA/RECOVERY</h2>
-    <ul>
-        <li>[LOG] <a href="cap1.html">CAP_01_O_INICIO.log</a></li>
-        <li>[LOG] <a href="cap2.html">CAP_02_O_BUNKER.log</a></li>
-        <li>[LOG] <a href="cap3.html">CAP_03_A_PESQUISA.log</a></li>
-        <li>[LOG] <a href="cap4.html">CAP_04_IRMA.log</a></li>
-        <li>[REP] <a href="estagios.html">ESTAGIOS_DE_INFECCAO.rep</a></li>
-        <li class="locked">[LOG] CAP_05_STATUS_OFFLINE.log (AGUARDANDO RECUPERAÇÃO...)</li>
-    </ul>
-    <a href="index.html" class="back">< VOLTAR AO HUB</a>
+    <div class="monitor">
+        <div class="content">
+            <h2>DIRETÓRIO: /SISTEMA/MEMORIA/RECOVERY</h2>
+            <ul>
+                <li>[LOG] <a href="cap1.html">CAP_01_O_INICIO.log</a></li>
+                <li>[LOG] <a href="cap2.html">CAP_02_O_BUNKER.log</a></li>
+                <li>[LOG] <a href="cap3.html">CAP_03_A_PESQUISA.log</a></li>
+                <li>[LOG] <a href="cap4.html">CAP_04_IRMA.log</a></li>
+                <li>[REP] <a href="estagios.html">ESTAGIOS_DE_INFECCAO.rep</a></li>
+                <li class="locked">[LOG] CAP_05_STATUS_OFFLINE (BLOQUEADO)</li>
+            </ul>
+        </div>
+        <img src="logo%20(2).png" class="system-logo">
+    </div>
 </body>
 </html>
