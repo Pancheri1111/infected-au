@@ -2,25 +2,30 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Banco de Dados - Infected AU</title>
+    <title>Banco de Dados - THE BROKEN HIVE</title>
     <style>
-        body { background: #050505; color: #d4d4d4; font-family: 'Courier New', Courier, monospace; padding: 50px; }
-        h2 { color: #ff3333; border-bottom: 1px solid #333; }
+        body { background: #050505; color: #d4d4d4; font-family: 'Courier New', monospace; padding: 40px; }
+        h2 { color: #ff3333; border-bottom: 2px solid #333; padding-bottom: 10px; }
+        .directory { color: #666; font-size: 0.9em; margin-bottom: 20px; }
         ul { list-style: none; padding: 0; }
-        li { margin: 15px 0; }
-        a { color: #00ff00; text-decoration: none; } /* Links em verde estilo terminal antigo */
-        a:hover { text-decoration: underline; }
-        .back { margin-top: 50px; display: block; color: #666; font-size: 0.8em; }
+        li { margin: 12px 0; border-left: 2px solid #222; padding-left: 10px; }
+        a { color: #ff3333; text-decoration: none; font-weight: bold; }
+        a:hover { color: #fff; text-shadow: 0 0 5px #ff3333; }
+        .status-locked { color: #444; cursor: not-allowed; }
+        .back { margin-top: 40px; display: block; color: #666; font-size: 0.8em; }
     </style>
 </head>
 <body>
-    <h2>DIRETÓRIO: /SISTEMA/MEMORIA/RECOVERY</h2>
-    <p>Selecione o arquivo para descriptografar:</p>
+    <h2>TERMINAL DE ACESSO: ARQUIVOS RECUPERADOS</h2>
+    <div class="directory">DIRETÓRIO: C:/JCJENSON/COOPER9/UNIDADE_N/LOGS</div>
     
     <ul>
-        <li>[ARQUIVO] <a href="cap1.html">DIARIO_N_CAP1_O_INICIO.log</a></li>
-        <li>[ARQUIVO] <a href="estagios.html">ANALISE_ESTAGIOS_INFECCAO.rep</a></li>
-        <li>[BLOQUEADO] <a href="#" style="color: #333; cursor: not-allowed;">DIARIO_N_CAP5_?????.log</a></li>
+        <li>[LOG] <a href="cap1.html">CAP_01_O_INICIO.log</a></li>
+        <li>[LOG] <a href="cap2.html">CAP_02_O_BUNKER.log</a></li>
+        <li>[LOG] <a href="cap3.html">CAP_03_A_PESQUISA.log</a></li>
+        <li>[LOG] <a href="cap4.html">CAP_04_IRMA.log</a></li>
+        <li>[REP] <a href="estagios.html">ESTAGIOS_DE_INFECCAO.rep</a></li>
+        <li>[LOG] <span class="status-locked">CAP_05_PENDENTE_SISTEMA_OFFLINE.log (BLOQUEADO)</span></li>
     </ul>
 
     <a href="index.html" class="back">< VOLTAR AO HUB PRINCIPAL</a>
