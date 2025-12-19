@@ -2,19 +2,21 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Banco de Dados - THE BROKEN HIVE</title>
+    <title>Logs de Recuperação</title>
     <style>
         body { background: #050505; color: #d4d4d4; font-family: 'Courier New', monospace; padding: 40px; }
+        .corner-logo { position: fixed; top: 15px; left: 15px; width: 60px; opacity: 0.7; filter: drop-shadow(0 0 5px #ff0000); }
         h2 { color: #ff3333; border-bottom: 2px solid #333; padding-bottom: 10px; }
         ul { list-style: none; padding: 0; }
         li { margin: 15px 0; border-left: 2px solid #222; padding-left: 10px; }
         a { color: #ff3333; text-decoration: none; font-weight: bold; }
         a:hover { color: #fff; text-shadow: 0 0 5px #ff3333; }
         .locked { color: #333; font-style: italic; }
-        .back { margin-top: 40px; display: block; color: #666; text-size: 0.8em; }
+        .back { margin-top: 40px; display: block; color: #666; text-decoration: none; }
     </style>
 </head>
 <body>
+    <img src="logo%20(2).png" class="corner-logo">
     <h2>DIRETÓRIO: /SISTEMA/MEMORIA/RECOVERY</h2>
     <ul>
         <li>[LOG] <a href="cap1.html">CAP_01_O_INICIO.log</a></li>
@@ -22,10 +24,8 @@
         <li>[LOG] <a href="cap3.html">CAP_03_A_PESQUISA.log</a></li>
         <li>[LOG] <a href="cap4.html">CAP_04_IRMA.log</a></li>
         <li>[REP] <a href="estagios.html">ESTAGIOS_DE_INFECCAO.rep</a></li>
-        
         <li class="locked">[LOG] CAP_05_STATUS_OFFLINE.log (AGUARDANDO RECUPERAÇÃO...)</li>
     </ul>
-
     <a href="index.html" class="back">< VOLTAR AO HUB</a>
 </body>
 </html>
