@@ -113,5 +113,20 @@ O estágio 3... respira. Não por necessidade, mas para tentar imitar os humanos
         }
         window.onload = typeWriter;
     </script>
+        <audio id="ambient-sound" loop>
+    <source src="computador.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+    // Como navegadores bloqueiam som automático, 
+    // o som vai começar assim que o usuário clicar em qualquer lugar da tela.
+    document.body.addEventListener('click', function() {
+        const audio = document.getElementById('ambient-sound');
+        if (audio.paused) {
+            audio.volume = 0.3; // Volume em 30% para não ficar alto demais
+            audio.play();
+        }
+    }, { once: true }); // Executa apenas o primeiro clique
+</script>
 </body>
 </html>
