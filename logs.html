@@ -4,29 +4,64 @@
     <meta charset="UTF-8">
     <title>JCJENSON - ARQUIVOS</title>
     <style>
-        body { background: #1a1a1a; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; font-family: 'Courier New', monospace; }
+        body { 
+            background: #1a1a1a; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh; 
+            margin: 0; 
+            font-family: 'Courier New', monospace; 
+        }
         
         .monitor {
-            width: 85vw; height: 80vh; background: #050505; border: 15px solid #333; border-radius: 25px;
-            position: relative; box-shadow: inset 0 0 80px rgba(0,0,0,0.9);
-            padding: 40px; box-sizing: border-box; overflow: hidden;
+            width: 85vw; 
+            height: 80vh; 
+            background: #050505; 
+            border: 15px solid #333; 
+            border-radius: 25px;
+            position: relative; 
+            box-shadow: inset 0 0 80px rgba(0,0,0,0.9);
+            padding: 40px; 
+            box-sizing: border-box; 
+            overflow: hidden;
         }
 
+        /* Efeito de linhas de scan */
         .monitor::before {
             content: " "; position: absolute; top: 0; left: 0; bottom: 0; right: 0;
-            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.02), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.02));
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%), 
+                        linear-gradient(90deg, rgba(255, 0, 0, 0.02), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.02));
             background-size: 100% 3px, 2px 100%; pointer-events: none; z-index: 10;
         }
 
         .content { color: #00ff00; z-index: 5; position: relative; }
         
-        h2 { border-bottom: 1px solid #00ff00; padding-bottom: 10px; color: #fff; font-size: 1.2em; }
+        .header-terminal {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid #00ff00;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .btn-exit {
+            color: #ff3333;
+            text-decoration: none;
+            font-weight: bold;
+            border: 1px solid #ff3333;
+            padding: 2px 10px;
+            font-size: 0.8em;
+        }
+        .btn-exit:hover { background: #ff3333; color: #000; }
+
+        h2 { color: #fff; font-size: 1.2em; margin: 0; }
         
         ul { list-style: none; padding: 0; }
         li { margin: 15px 0; padding-left: 10px; border-left: 2px solid #004400; }
         
-        a { color: #00ff00; text-decoration: none; font-weight: bold; }
-        a:hover { background: #00ff00; color: #000; }
+        .log-link { color: #00ff00; text-decoration: none; font-weight: bold; }
+        .log-link:hover { background: #00ff00; color: #000; }
 
         .system-logo { position: absolute; bottom: 20px; right: 20px; width: 70px; opacity: 0.4; filter: drop-shadow(0 0 5px #ff0000); }
         .locked { color: #004400; font-style: italic; }
@@ -35,32 +70,31 @@
 <body>
     <div class="monitor">
         <div class="content">
-            <h2>DIRETÓRIO: /SISTEMA/MEMORIA/RECOVERY</h2>
+            <div class="header-terminal">
+                <h2>DIRETÓRIO: /SISTEMA/RECOVERY</h2>
+                <a href="index.html" class="btn-exit">[ SAIR_DO_SISTEMA ]</a>
+            </div>
+
             <ul>
-                <li>[LOG] <a href="cap1.html">CAP_01_O_INICIO.log</a></li>
-                <li>[LOG] <a href="cap2.html">CAP_02_O_BUNKER.log</a></li>
-                <li>[LOG] <a href="cap3.html">CAP_03_A_PESQUISA.log</a></li>
-                <li>[LOG] <a href="cap4.html">CAP_04_IRMA.log</a></li>
-                <li>[REP] <a href="estagios.html">ESTAGIOS_DE_INFECCAO.rep</a></li>
+                <li>[LOG] <a href="cap1.html" class="log-link">CAP_01_O_INICIO.log</a></li>
+                <li>[LOG] <a href="cap2.html" class="log-link">CAP_02_O_BUNKER.log</a></li>
+                <li>[LOG] <a href="cap3.html" class="log-link">CAP_03_A_PESQUISA.log</a></li>
+                <li>[LOG] <a href="cap4.html" class="log-link">CAP_04_IRMA.log</a></li>
+                <li>[REP] <a href="estagios.html" class="log-link">ESTAGIOS_DE_INFECCAO.rep</a></li>
                 <li class="locked">[LOG] CAP_05_STATUS_OFFLINE (BLOQUEADO)</li>
             </ul>
         </div>
+        
         <img src="logo%20(2).png" class="system-logo">
     </div>
-    <audio id="ambient-sound" loop>
-    <source src="computador.mp3" type="audio/mpeg">
-</audio>
 
-<script>
-    // Como navegadores bloqueiam som automático, 
-    // o som vai começar assim que o usuário clicar em qualquer lugar da tela.
-    document.body.addEventListener('click', function() {
-        const audio = document.getElementById('ambient-sound');
-        if (audio.paused) {
-            audio.volume = 0.3; // Volume em 30% para não ficar alto demais
+    <audio id="ambient-sound" loop src="computador.mp3"></audio>
+    <script>
+        document.body.addEventListener('click', function() {
+            const audio = document.getElementById('ambient-sound');
+            audio.volume = 0.3;
             audio.play();
-        }
-    }, { once: true }); // Executa apenas o primeiro clique
-</script>
+        }, { once: true });
+    </script>
 </body>
 </html>
